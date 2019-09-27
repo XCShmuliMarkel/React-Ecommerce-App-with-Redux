@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+//import { useState, useEffect } from 'react';
 import jsforce from 'jsforce';
 
 let conn = new jsforce.Connection({
@@ -6,19 +6,22 @@ let conn = new jsforce.Connection({
     accessToken : 'u2HY0jp6NGPmivFuxSqxaNf2',
     proxyUrl: "https://node-salesforce-proxy.herokuapp.com/proxy"
 });
-
-conn.login('admin@rcg99.demo', 'Salesforce1' + 'u2HY0jp6NGPmivFuxSqxaNf2', function(err, userInfo) {
+var password = 'Salesforce1u2HY0jp6NGPmivFuxSqxaNf2';
+conn.login('admin@rcg99.demo', password, function(err, userInfo) {
    
     if (err) {
         console.error(err);
     }
+    conn.query("SELECT Id, Name FROM ccrz__E_Product__c", function(err, result) {
+        console.log("total : Hi");
+      if (err) { return console.error(err); }
+    
+      console.log("fetched : " + result.records.length);
+    });
+
+
     console.log('User ID: ' + userInfo.id);
 });
 
 //var records = [];
 
-conn.query("SELECT Id, Name FROM Account", function(err, result) {
-  if (err) { return console.error(err); }
-  console.log("total : " + result.totalSize);
-  console.log("fetched : " + result.records.length);
-});
