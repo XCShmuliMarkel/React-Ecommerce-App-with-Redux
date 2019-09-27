@@ -4,8 +4,12 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "browserslist": "^4.7.0",
+    "caniuse-lite": "^1.0.30000997",
+    "jsforce": "^1.9.2",
     "node-sass": "^4.11.0",
     "react": "^16.8.3",
+    "react-devtools": "^4.1.1",
     "react-dom": "^16.8.3",
     "react-medium-image-zoom": "^3.0.15",
     "react-redux": "^6.0.1",
