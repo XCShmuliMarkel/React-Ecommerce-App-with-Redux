@@ -12,16 +12,29 @@ conn.login('admin@rcg99.demo', password, function(err, userInfo) {
     if (err) {
         console.error(err);
     }
-    conn.query("SELECT Id, Name FROM ccrz__E_Product__c WHERE Id = \'a8P4P000000cI8wUAE\'", function(err, result) {
+    /*conn.query("SELECT Id, Name FROM ccrz__E_Product__c WHERE Id = \'a8P4P000000cI8wUAE\'", function(err, result) {
         console.log("total : Hi");
       if (err) { return console.error(err); }
     
       console.log("fetched : " + result.records.length);
     });
-
+*/
 
     console.log('User ID: ' + userInfo.id);
-});
+    var options = {
+        headers: {
+            'Authorization': 'Bearer ' + conn.accessToken
+        }
+    }
+
+    //https://github.com/jsforce/jsforce/issues/492
+        conn.requestGet('/services/apexrest/ccrz/ccproduct/v8/fetch?id=a5x4T000000GwN4QAK', options)
+        .then(function(result) {
+            console.log(result);
+        }, function (err) {
+            console.log(err);
+        });
+    });
 
 //var records = [];
 

@@ -7,7 +7,7 @@
     "browserslist": "^4.7.0",
     "caniuse-lite": "^1.0.30000997",
     "jsforce": "^1.9.2",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.12.0",
     "react": "^16.8.3",
     "react-devtools": "^4.1.1",
     "react-dom": "^16.8.3",
