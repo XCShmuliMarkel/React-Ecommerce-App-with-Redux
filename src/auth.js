@@ -12,7 +12,7 @@ conn.login('admin@rcg99.demo', password, function(err, userInfo) {
     if (err) {
         console.error(err);
     }
-    conn.query("SELECT Id, Name FROM ccrz__E_Product__c", function(err, result) {
+    conn.query("SELECT Id, Name FROM ccrz__E_Product__c WHERE Id = \'a8P4P000000cI8wUAE\'", function(err, result) {
         console.log("total : Hi");
       if (err) { return console.error(err); }
     
