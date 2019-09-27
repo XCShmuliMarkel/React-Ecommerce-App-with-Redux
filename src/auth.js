@@ -15,7 +15,7 @@ conn.login('admin@rcg99.demo', 'Salesforce1' + 'u2HY0jp6NGPmivFuxSqxaNf2', funct
     console.log('User ID: ' + userInfo.id);
 });
 
-var records = [];
+//var records = [];
 
 conn.query("SELECT Id, Name FROM Account", function(err, result) {
   if (err) { return console.error(err); }
