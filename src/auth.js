@@ -16,7 +16,7 @@ conn.login('admin@rcg99.demo', password, function(err, userInfo) {
         console.log("total : Hi");
       if (err) { return console.error(err); }
     
-      console.log("fetched : " + result.records.length);
+      console.log("fetched : " + result.records.length);?id=a5x4T000000GwN4QAK
     });
 */
 
@@ -28,7 +28,7 @@ conn.login('admin@rcg99.demo', password, function(err, userInfo) {
     }
 
     //https://github.com/jsforce/jsforce/issues/492
-        conn.requestGet('/services/apexrest/ccrz/ccproduct/v8/fetch?id=a5x4T000000GwN4QAK', options)
+        conn.requestGet('/services/apexrest/ccrz/ccproduct/v8/fetch?LIMIT=24', options)
         .then(function(result) {
             console.log(result);
         }, function (err) {
