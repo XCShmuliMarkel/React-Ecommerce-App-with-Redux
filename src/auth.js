@@ -26,15 +26,17 @@ conn.login('admin@rcg99.demo', password, function(err, userInfo) {
             'Authorization': 'Bearer ' + conn.accessToken
         }
     }
-
+    var records = [];
     //https://github.com/jsforce/jsforce/issues/492
         conn.requestGet('/services/apexrest/ccrz/ccproduct/v8/fetch?LIMIT=24', options)
         .then(function(result) {
+            records = result.productList;
             console.log(result);
+            console.log(records);
         }, function (err) {
             console.log(err);
-        });
+        }
+      
+        );
+       
     });
-
-//var records = [];
-
