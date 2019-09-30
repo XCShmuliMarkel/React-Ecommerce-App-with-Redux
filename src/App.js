@@ -11,10 +11,11 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
 import ShoppingCart from "./pages/ShopingCart/ShoppingCart";
-import auth from "./auth";
+import Records from "./auth";
+
 // jsforce or https://www.npmjs.com/package/salesforce-node-client???
 export const  store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
-
+console.log("App.js:", Records);
 class App extends Component {
   render() {
     return (
