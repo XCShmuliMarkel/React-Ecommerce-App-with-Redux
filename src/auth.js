@@ -1,8 +1,9 @@
 //import { useState, useEffect } from 'react';
 import jsforce from 'jsforce';
 
-export const records = [1,2,3];
-console.log(records);
+export const Records = [1,2,3];
+console.log(Records);
+export default Records;
 
 /*
 {
