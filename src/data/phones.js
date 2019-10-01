@@ -1,5 +1,5 @@
 
-import {Records} from "../auth";
+import Records from "../auth";
 
 console.log("Records:", Records);
 export const phones = [{
