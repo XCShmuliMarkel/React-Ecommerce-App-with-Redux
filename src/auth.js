@@ -1,6 +1,6 @@
 import jsforce from 'jsforce';
 
-const Records = [{"title": "x"}];
+const Records = [];
 export default Records;
 
 let conn = new jsforce.Connection({
@@ -34,6 +34,7 @@ conn.login('admin@rcg99.demo', password, function(err, userInfo) {
         conn.requestGet('/services/apexrest/ccrz/ccproduct/v8/fetch?LIMIT=24', options)
         .then(function(result) {
             console.log(result.productList);
+            Records[0] = result.productList[0];
             console.log(Records);
         }, function (err) {
             console.log(err);
